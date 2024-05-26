@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!----css3---->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!--google material icon-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+
+
+    <div class="wrapper">
+
+        <div class="body-overlay"></div>
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><img src="/RENTAL-DASHBOARD/weblab/img/head-logo.png" class="img-fluid"><span>Rentalproperty</span>
+                </h3>
+                <!-- <span>Your Key to Comfortable Living</span> -->
+            </div>
+            <ul class="list-unstyled components">
+                <li class="sidebar-item active">
+                    <a href="dashboard.html" class="dashboard">
+                        <i class="material-icons">dashboard</i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item dropdown">
+                    <a href="rental-account2.html">
+                        <i class="material-icons">monetization_on</i>
+                        <span>Rental Amount</span>
+                    </a>
+                </li>
+                <li class="sidebar-item dropdown">
+                    <a href="rental-history.html">
+                        <i class="material-icons">history</i>
+                        <span>Rental History</span>
+                    </a>
+                </li>
+                <li class="sidebar-item dropdown">
+                    <a href="save-list.html">
+                        <i class="material-icons">bookmarks</i>
+                        <span>Saved List</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <div class="top-navbar">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+
+                        <button type="button" id="sidebarCollapse" class="d-xl-block d-lg-block d-md-mone d-none">
+                            <span class="material-icons">menu_open</span>
+                        </button>
+
+                        <div class="for-this-two">
+
+                            <button class="menu-bd d-flex d-lg-none ml-auto more-button" type="button"
+                                data-toggle="collapse" data-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="material-icons">menu_open</span>
+                            </button>
+
+                            <div class="collapse navbar-collapse d-lg-block d-xl-block d-sm-block d-md-block"
+                                id="navbarSupportedContent">
+                                <ul class="nav navbar-nav ml-auto">
+                                    <li class="dropdown nav-item active">
+                                        <a href="#" class="nav-link" data-toggle="dropdown">
+                                            <div class="header_img">
+                                                <span class="image-david">
+                                                    <img src="/RENTAL-DASHBOARD/weblab/img/profile-pic.png" alt="">
+                                                </span>
+
+                                                <div class="David-text logo-text">
+                                                    <span class="name">Maria David</span>
+                                                </div>
+                                            </div>
+
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="profile.html"><i class="material-icons"
+                                                        style="position: absolute;display: flex;">person</i>Profile</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="material-icons"
+                                                        style="position: absolute;display: flex;">logout</i>Log-Out</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+
+            <div class="main-content">
+
+                <div class="container-fluid">
+
+                    <div class="dashborder">
+                        <div class="board-dash">
+                            <span>Dashboard</span>
+                        </div>
+
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="">Rental Property</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                            </ol>
+                        </nav>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="container-fluid">
+                    <div class="row mt-5">
+                        <div class="col-lg-6 col-md-6 mb-3">
+                            <div class="ongoing-rental-container">
+                                <div class="card-text-dash">
+                                    <div class="title-dash">
+                                        <h5>Ongoing Rental</h5>
+                                    </div>
+                                    <div class="due-text-in">
+                                        <span>Due in 7 days</span>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row mt-5 mb-5">
+                                    <div class="col with-border mb-3">
+                                        <div class="d-total-container">
+                                            <div class="circle" style="background-color: #336F17;">
+                                            </div>
+                                            <div class="d-total-text">
+                                                <span>Total</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-amount">
+                                            <h4 style="color: #f97171;">$400</h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="col with-border mb-3">
+
+                                        <div class="d-total-container">
+                                            <div class="circle" style="background-color: #336F17;">
+                                            </div>
+                                            <div class="d-total-text">
+                                                <span>Paid</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-amount">
+                                            <h4 style="color: #b9e1ff;">$350</h4>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col mb-3">
+
+                                        <div class="d-total-container">
+                                            <div class="circle">
+                                            </div>
+                                            <div class="d-total-text">
+                                                <span>Remaining</span>
+                                            </div>
+                                        </div>
+                                        <div class="d-amount">
+                                            <h4 style="color: #ffee97;">$50</h4>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col mb-3">
+                                        <button type="button" class="pay-now btn btn-primary btn-block">Pay Now</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 mb-3">
+                            <div class="ongoing-rental-container">
+                                <canvas id="myDoughnutChart" width="1641" height="430"
+                                    style="display: block;box-sizing: border-box;height: 215px;width: 452px;margin-bottom: 20px;"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-md-6 mt-4 mb-3">
+                            <div class="ongoing-rental-container">
+                                <div class="title-for-home mb-2">
+                                    <div class="title-wrapper-viewall">
+                                        <div class="ongoing-props">
+                                            <h6>Ongoing Properties</h6>
+                                            <div class="circle below-cir" style="background-color: #72CD48;">
+                                            </div>
+                                        </div>
+                                        <a href="#" class="view-all">see all</a>
+                                    </div>
+                                </div>
+                                <div class="dash-pa">
+                                    <p>Currently You are staying here</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-8 mt-2">
+                                        <div class="first-deta-photo">
+                                            <img src="/RENTAL-DASHBOARD/weblab/img/dash1.png" alt="Image 1"
+                                                class="img-fluid">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 mt-2">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="proper-detai-photo">
+                                                    <img src="/RENTAL-DASHBOARD/weblab/img/dash2.png" alt="Image 2"
+                                                        class="img-fluid align-height">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="proper-detai-photo">
+                                                    <img src="/RENTAL-DASHBOARD/weblab/img/dash3.png" alt="Image 3"
+                                                        class="img-fluid align-height">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="next-head-dash">
+                                    <h5>Subang Jaya, USJ Heights</h5>
+                                </div>
+                                <div class="next-head-banglaw">
+                                    <ul class="bungloww">
+                                        <li class="not-buble">Bungalow</li>
+                                        <li>Built-up:8,423 sq. ft</li>
+                                        <li>Partly furnished</li>
+                                    </ul>
+                                    <hr class="harline">
+                                </div>
+
+                                <div class="row">
+                                    <div class="texta">
+                                        <div class="car-side">
+                                            <div class="card-body paara-iicn d-flex align-items-center">
+                                                <img src="/RENTAL-DASHBOARD/weblab/img/car-dash.png" class="icntype-img"
+                                                    alt="Image 1">
+                                                <p class="numb card-text"
+                                                    style="margin-left: 11px;font-size: 18px;color: #7A7A7A;">6
+                                                    + 1</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div>
+                                            <div class="card-body paara-iicn d-flex align-items-center">
+                                                <img src="/RENTAL-DASHBOARD/weblab/img/shower-dash.png"
+                                                    class="icntype-img" alt="Image 1">
+                                                <p class="numb card-text"
+                                                    style="margin-left: 11px;font-size: 18px;color: #7A7A7A;">7
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mt-4 mb-3">
+                            <div class="ongoing-rental-container">
+                                <div class="title-for-home mb-2">
+                                    <div class="title-wrapper-viewall">
+                                        <div class="ongoing-props">
+                                            <h6>Rental History</h6>
+                                            <div class="circle below-cir" style="background-color: #D81A36;">
+                                            </div>
+                                        </div>
+                                        <a href="#" class="view-all">see all</a>
+                                    </div>
+                                </div>
+                                <div class="dash-pa">
+                                    <p>Currently You are staying here</p>
+                                </div>
+                                <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"
+                                    data-bs-interval="false">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="/RENTAL-DASHBOARD/weblab/img/carousel1.png" class="d-block w-100"
+                                                alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/RENTAL-DASHBOARD/weblab/img/carousel1.png" class="d-block w-100"
+                                                alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="/RENTAL-DASHBOARD/weblab/img/carousel1.png" class="d-block w-100"
+                                                alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+                                <div class="next-head-daasd">
+                                    <h5>Serenity Springs Estate</h5>
+                                </div>
+                                <div class="next-head-banglaaw">
+                                    <p>You have successfully got rent on this properties </p>
+                                    <p class="date-dash">02-05-2024</p>
+                                    <!-- <hr class="harline"> -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid mt-4 mb-4">
+                    <div class="ongoing-rental-container">
+
+                        <div class="container-fluid">
+                            <div class="title-for-home last-now mb-2">
+                                <div class="title-wrapper-viewall">
+                                    <h6>Saved List</h6>
+                                    <a href="#" class="view-all">see all</a>
+                                </div>
+                                <p class="you-save-bro" style="color: #929292;">Your saved properties</p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4 with-hr">
+                                    <div class="row">
+                                        <div class="col-lg-8 col-md-8 mt-2">
+                                            <div class="first-deta-photo">
+                                                <img src="/RENTAL-DASHBOARD/weblab/img/dash1.png" alt="Image 1"
+                                                    class="img-fluid">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4 mt-2">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="proper-detai-photo">
+                                                        <img src="/RENTAL-DASHBOARD/weblab/img/dash2.png" alt="Image 2"
+                                                            class="img-fluid align-height">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="proper-detai-photo">
+                                                        <img src="/RENTAL-DASHBOARD/weblab/img/dash3.png" alt="Image 3"
+                                                            class="img-fluid align-height">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="next-head-dash">
+                                        <h5>Subang Jaya, USJ Heights</h5>
+                                    </div>
+                                    <div class="next-head-banglaw">
+                                        <ul class="bungloww">
+                                            <li class="not-buble">Bungalow</li>
+                                            <li>Built-up:8,423 sq. ft</li>
+                                            <li>Partly furnished</li>
+                                        </ul>
+                                        <hr class="harline">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="texta">
+                                            <div class="car-side">
+                                                <div class="card-body paara-iicn d-flex align-items-center">
+                                                    <img src="/RENTAL-DASHBOARD/weblab/img/car-dash.png"
+                                                        class="icntype-img" alt="Image 1">
+                                                    <p class="numb card-text"
+                                                        style="margin-left: 11px;font-size: 18px;color: #7A7A7A;">6
+                                                        + 1</p>
+                                                </div>
+                                            </div>
+
+
+                                            <div>
+                                                <div class="card-body paara-iicn d-flex align-items-center">
+                                                    <img src="/RENTAL-DASHBOARD/weblab/img/shower-dash.png"
+                                                        class="icntype-img" alt="Image 1">
+                                                    <p class="numb card-text"
+                                                        style="margin-left: 11px;font-size: 18px;color: #7A7A7A;">7
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="row">
+                                        <div class="col-lg-8 col-md-8 mt-2">
+                                            <div class="first-deta-photo">
+                                                <img src="/RENTAL-DASHBOARD/weblab/img/dash1.png" alt="Image 1"
+                                                    class="img-fluid">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4 mt-2">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="proper-detai-photo">
+                                                        <img src="/RENTAL-DASHBOARD/weblab/img/dash2.png" alt="Image 2"
+                                                            class="img-fluid align-height">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="proper-detai-photo">
+                                                        <img src="/RENTAL-DASHBOARD/weblab/img/dash3.png" alt="Image 3"
+                                                            class="img-fluid align-height">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="next-head-dash">
+                                        <h5>Subang Jaya, USJ Heights</h5>
+                                    </div>
+                                    <div class="next-head-banglaw">
+                                        <ul class="bungloww">
+                                            <li class="not-buble">Bungalow</li>
+                                            <li>Built-up:8,423 sq. ft</li>
+                                            <li>Partly furnished</li>
+                                        </ul>
+                                        <hr class="harline">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="texta">
+                                            <div class="car-side">
+                                                <div class="card-body paara-iicn d-flex align-items-center">
+                                                    <img src="/RENTAL-DASHBOARD/weblab/img/car-dash.png"
+                                                        class="icntype-img" alt="Image 1">
+                                                    <p class="numb card-text"
+                                                        style="margin-left: 11px;font-size: 18px;color: #7A7A7A;">6
+                                                        + 1</p>
+                                                </div>
+                                            </div>
+
+
+                                            <div>
+                                                <div class="card-body paara-iicn d-flex align-items-center">
+                                                    <img src="/RENTAL-DASHBOARD/weblab/img/shower-dash.png"
+                                                        class="icntype-img" alt="Image 1">
+                                                    <p class="numb card-text"
+                                                        style="margin-left: 11px;font-size: 18px;color: #7A7A7A;">7
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-06">
+                                <p class="copyright d-flex"> &copy 2024 Design by  
+                                    <a href="#">  Compumatrix </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $('#content').toggleClass('active');
+            });
+
+            $('.more-button,.body-overlay').on('click', function () {
+                $('#sidebar,.body-overlay').toggleClass('show-nav');
+            });
+
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebarItems = document.querySelectorAll('.sidebar-item a');
+
+            function setActiveItem() {
+                const currentPath = window.location.pathname.split('/').pop(); // Get current page name
+                sidebarItems.forEach(item => {
+                    const itemPath = item.getAttribute('href');
+                    if (itemPath === currentPath) {
+                        item.parentElement.classList.add('active');
+                    } else {
+                        item.parentElement.classList.remove('active');
+                    }
+                });
+            }
+
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    // Update active state immediately
+                    sidebarItems.forEach(el => el.parentElement.classList.remove('active'));
+                    this.parentElement.classList.add('active');
+
+                    // Allow the default navigation to occur
+                });
+            });
+
+            // Set the correct active item on page load
+            setActiveItem();
+        });
+
+    </script>
+
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('myDoughnutChart').getContext('2d');
+            var myDoughnutChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow',],
+                    datasets: [{
+                        label: 'Total',
+                        data: [400, 350, 50,],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            // 'rgba(75, 192, 192, 0.2)',
+                            // 'rgba(153, 102, 255, 0.2)',
+                            // 'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            // 'rgba(75, 192, 192, 1)',
+                            // 'rgba(153, 102, 255, 1)',
+                            // 'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
